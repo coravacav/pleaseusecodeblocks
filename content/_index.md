@@ -68,3 +68,7 @@ For more resources for code-block (and other!) formatting, check out:
 -   [Discord's Guide](https://support.discord.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-#h_01GY0DAKGXDEHE263BCAYEGFJA)
 -   [Slack's Guide](https://slack.com/intl/en-ca/help/articles/204145658-Format-your-messages)
 -   [StackOverflow's Guide](https://stackoverflow.com/editing-help#syntax-highlighting)
+
+## Bonus: Formatting links!
+
+You can usually do markdown style links in most chat rooms and forums. For example, `[Rust's website](https://www.rust-lang.org/)` turns into [Rust's website](https://www.rust-lang.org/).

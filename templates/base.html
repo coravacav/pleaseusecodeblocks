@@ -40,6 +40,11 @@
     <script>
         let times_visited = Number(localStorage.getItem('times_visited') ?? 0);
 
+        if (window.location.href.includes('please')) {
+            document.body.classList.remove('js');
+            return;
+        }
+
         let replace_value =
             'How the fuck did you manage that? Anyway, please for the love of god';
 
