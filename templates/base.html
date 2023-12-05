@@ -10,7 +10,7 @@
             type="font/woff2"
             crossorigin="anonymous"
         />
-        <meta property="og:title" content="Please use code blocks!" />
+        <meta property="og:title" content="Use code blocks!" />
         <meta
             property="description"
             content="Learn how to use single-line and multi-line code blocks for clarity in chat rooms and forums."
@@ -20,11 +20,14 @@
             content="Learn how to use single-line and multi-line code blocks for clarity in chat rooms and forums."
         />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://pleaseusecodeblocks.com/" />
-        <title>Please use code blocks!</title>
+        <meta property="og:url" content="https://usecodeblocks.com/" />
+        <meta property="canonical" content="https://usecodeblocks.com/" />
+        <title>Use code blocks!</title>
     </head>
-
     <body>
+        <script>
+            document.body.classList.add('js');
+        </script>
         <main>{% block content %} {% endblock %}</main>
         <footer>
             Inspired by
@@ -34,4 +37,27 @@
             >
         </footer>
     </body>
+    <script>
+        let times_visited = Number(localStorage.getItem('times_visited') ?? 0);
+
+        let replace_value =
+            'How the fuck did you manage that? Anyway, please for the love of god';
+
+        if (times_visited == 0) {
+            replace_value = 'Please';
+        } else if (times_visited == 1) {
+            replace_value = '';
+        } else if (times_visited > 1) {
+            replace_value = 'Fucking';
+        }
+
+        const title = document.querySelector('h1');
+        title.innerText = title.innerText.replace('Please', replace_value);
+
+        times_visited += 1;
+
+        localStorage.setItem('times_visited', times_visited.toString());
+
+        document.body.classList.remove('js');
+    </script>
 </html>

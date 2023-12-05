@@ -26,6 +26,10 @@ body {
     background-color: var(--light);
     padding: 0 10px;
     font-family: "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    &.js {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 680px) {

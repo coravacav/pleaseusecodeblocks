@@ -2,7 +2,7 @@
 template = "page.html"
 +++
 
-# Use Code Blocks for Clarity
+# Please Use Code Blocks for Clarity
 
 In chat rooms and forums, it's crucial to present your code clearly. Instead of just pasting code, use code blocks. This not only maintains the format but also makes it easier for others to understand and help you.
 
