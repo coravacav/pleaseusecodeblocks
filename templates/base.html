@@ -40,28 +40,25 @@
     <script>
         let times_visited = Number(localStorage.getItem('times_visited') ?? 0);
 
-        if (window.location.href.includes('please')) {
-            document.body.classList.remove('js');
-            return;
+        if (!window.location.href.includes('please')) {
+            let replace_value =
+                'How the fuck did you manage that? Anyway, please for the love of god';
+
+            if (times_visited == 0) {
+                replace_value = 'Please';
+            } else if (times_visited == 1) {
+                replace_value = '';
+            } else if (times_visited > 1) {
+                replace_value = 'Fucking';
+            }
+
+            const title = document.querySelector('h1');
+            title.innerText = title.innerText.replace('Please', replace_value);
+
+            times_visited += 1;
+
+            localStorage.setItem('times_visited', times_visited.toString());
         }
-
-        let replace_value =
-            'How the fuck did you manage that? Anyway, please for the love of god';
-
-        if (times_visited == 0) {
-            replace_value = 'Please';
-        } else if (times_visited == 1) {
-            replace_value = '';
-        } else if (times_visited > 1) {
-            replace_value = 'Fucking';
-        }
-
-        const title = document.querySelector('h1');
-        title.innerText = title.innerText.replace('Please', replace_value);
-
-        times_visited += 1;
-
-        localStorage.setItem('times_visited', times_visited.toString());
 
         document.body.classList.remove('js');
     </script>
